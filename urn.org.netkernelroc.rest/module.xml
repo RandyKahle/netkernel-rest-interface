@@ -17,9 +17,58 @@
 
 
   <rootspace name="NetKernel / REST" public="true" uri="urn:org:netkernelroc:rest">
+
+
   </rootspace>
 
   <rootspace name="NetKernel / REST / HTTP" public="false" uri="urn:org:netkernelroc:rest:http">
+    <overlay>
+      <prototype>RESTOverlay</prototype>
+      <config>
+        <basepath>/</basepath>
+      </config>
+      <space>
+        <mapper>
+          <config>
+            <endpoint>
+              <meta>
+                <rest>
+                  <simple>status</simple>
+                  <method>GET</method>
+                </rest>
+              </meta>
+              <grammar>
+                <active>
+                  <identifier>active:rest-status</identifier>
+                </active>
+              </grammar>
+              <request>
+                <identifier>active:rest-status-impl</identifier>
+                <argument name="httpParam" method="value">httpRequest:/params</argument>
+                <argument name="acceptHeader" method="value">httpRequest:/header/Accept</argument>
+              </request>
+            </endpoint>
+          </config>
+          <space>
+            <accessor>
+              <grammar>
+                <active>
+                  <identifier>active:rest-status-impl</identifier>
+                  <argument name="httpParam"/>
+                  <argument name="acceptHeader"/>
+                </active>
+              </grammar>
+              <class>org.netkernelroc.rest.endpoint.Status</class>
+            </accessor>
+          </space>
+        </mapper>
+      </space>
+    </overlay>
+
+    <import>
+      <private/>
+      <uri>urn:org:netkernel:tpt:http</uri>
+    </import>
   </rootspace>
 
   <rootspace name="NetKernel / REST / documentation" public="true" uri="urn:org:netkernelroc:rest:doc">
