@@ -22,7 +22,14 @@
   <rootspace name="NetKernel / REST / HTTP" public="false" uri="urn:org:netkernelroc:rest:http">
   </rootspace>
 
+  <rootspace name="NetKernel / REST / documentation" public="true" uri="urn:org:netkernelroc:rest:doc">
 
-
+    <fileset>
+      <regex>res:/etc/system/(Books|Docs).xml</regex>
+    </fileset>
+    <fileset>
+      <regex>res:/org/netkernelroc/rest/doc/.*</regex>
+    </fileset>
+  </rootspace>
 
 </module>

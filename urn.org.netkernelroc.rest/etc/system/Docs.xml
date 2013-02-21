@@ -1,0 +1,16 @@
+<docs>
+  <doc>
+    <id>doc:org:netkernelroc:rest:title</id>
+    <title>REST management interface</title>
+    <desc/>
+    <uri>res:/org/netkernelroc/rest/doc/title.txt</uri>
+    <category>doc accessor</category>
+  </doc>
+  <doc>
+    <id>doc:org:netkernelroc:rest:license:mit</id>
+    <title>License</title>
+    <desc>Module license</desc>
+    <uri>res:/org/netkernelroc/rest/doc/license-mit.txt</uri>
+    <category>module license</category>
+  </doc>
+</docs>

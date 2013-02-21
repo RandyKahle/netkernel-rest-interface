@@ -1,0 +1,18 @@
+<books>
+  <book>
+    <id>book:org:netkernelroc:rest</id>
+    <title>NetKernel REST management interface</title>
+    <author>Randolph Kahle</author>
+    <author>Brian Sletten</author>
+    <publisher>NetKernel ROC</publisher>
+    <date/>
+    <modified/>
+    <icon/>
+    <keywords>REST,management,NetKernel,NetKernelROC</keywords>
+    <toc>
+      <item id="doc:org:netkernelroc:rest:title" />
+      <separator/>
+      <item id="doc:org:netkernelroc:rest:license:mit" title="MIT License" />
+    </toc>
+  </book>
+</books>

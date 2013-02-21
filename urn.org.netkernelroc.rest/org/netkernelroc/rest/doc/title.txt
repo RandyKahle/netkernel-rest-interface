@@ -1,0 +1,20 @@
+=NetKernel REST management interface=
+
+This module provides an internal and external management interface for
+a NetKernel instance.
+
+This interface can be used by external tools to query about the status
+or configuration of NetKernel as well as make changes to NetKernel.
+
+{authornote}
+The intention is to provide this interface via internal ROC requests, HTTP REST request as well as other
+transports.{/authornote}
+
+Here is what the interface should provide:
+
+* Configuration support. Get/Set individual configuration bits or whole sets at a time.
+* Running state. Shutdown, Reboot, Refresh (? what is that?)
+* Module management. ?How does this relate to modules.d? Do we manage modules.d through this interface?
+* Runtime information. We could have information gathered such as requests/sec, etc. and captured internally and then provided through this interface.
+
+
