@@ -32,4 +32,85 @@
     </fileset>
   </rootspace>
 
+
+  <rootspace name="NetKernel / REST / HTTP / Fulcrum" public="false" uri="urn:org:netkernelroc:rest:http:fulcrum">
+
+    <endpoint>
+      <id>fulcrum.frontend.HTTP.REST</id>
+      <prototype>HTTPTransport</prototype>
+      <private/>
+    </endpoint>
+    <overlay>
+      <prototype>HTTPBridge</prototype>
+      <exceptionHandler>res:/introspect/exceptionhandler</exceptionHandler>
+      <config>
+        <rewrite>
+          <match>https?://[^/]*/([^?]*)(\?.*)?</match>
+          <to>res:/$1</to>
+        </rewrite>
+        <rewrite>
+          <match>ws://[^/]*/([^\?]*)(\?.*)?</match>
+          <to>ws:/$1</to>
+        </rewrite>
+      </config>
+
+      <space name="REST Management Fulcrum HTTP Bridge Overlay">
+
+        <!--Import application modules here-->
+        <import>
+          <uri>urn:org:netkernelroc:rest:http</uri>
+        </import>
+
+        <import>
+          <uri>urn:org:netkernel:ext:system</uri>
+          <private/>
+        </import>
+      </space>
+    </overlay>
+
+    <import>
+      <uri>urn:org:netkernel:ext:layer1</uri>
+      <private/>
+    </import>
+    <fileset>
+      <private/>
+      <glob>etc/HTTPServerConfig.xml</glob>
+    </fileset>
+    <import>
+      <private/>
+      <uri>urn:org:netkernel:ext:system</uri>
+    </import>
+    <import>
+      <private/>
+      <uri>urn:org:netkernel:xml:core</uri>
+    </import>
+    <import>
+      <private/>
+      <uri>urn:org:netkernel:tpt:http</uri>
+    </import>
+    <import>
+      <private/>
+      <uri>urn:org:netkernel:mod:security</uri>
+    </import>
+    <import>
+      <private/>
+      <uri>urn:org:netkernel:nkse:style</uri>
+    </import>
+    <mapper>
+      <config>
+        <endpoint>
+          <request>
+            <identifier>meta:ExceptionStyler</identifier>
+          </request>
+        </endpoint>
+      </config>
+      <space>
+        <import>
+          <uri>urn:org:netkernel:ext:introspect</uri>
+        </import>
+      </space>
+    </mapper>
+  </rootspace>
+
+
 </module>
