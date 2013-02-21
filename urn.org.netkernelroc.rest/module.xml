@@ -1,0 +1,28 @@
+<module version="2.0">
+  <meta>
+    <identity>
+      <uri>urn:org:netkernelroc:rest</uri>
+      <version>1.0.0</version>
+    </identity>
+    <info>
+      <name>NetKernel / REST</name>
+      <description>REST interface for external management of a NetKernel instance</description>
+      <icon>res:/org/netkernelroc/tpt/rest/images/icon.png</icon>
+    </info>
+  </meta>
+
+  <system>
+    <dynamic/>
+  </system>
+
+
+  <rootspace name="NetKernel / REST" public="true" uri="urn:org:netkernelroc:rest">
+  </rootspace>
+
+  <rootspace name="NetKernel / REST / HTTP" public="false" uri="urn:org:netkernelroc:rest:http">
+  </rootspace>
+
+
+
+
+</module>
