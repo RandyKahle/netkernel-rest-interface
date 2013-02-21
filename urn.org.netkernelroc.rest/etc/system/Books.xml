@@ -10,9 +10,11 @@
     <icon/>
     <keywords>REST,management,NetKernel,NetKernelROC</keywords>
     <toc>
-      <item id="doc:org:netkernelroc:rest:title" />
+      <item id="doc:org:netkernelroc:rest:title">
+        <item id="doc:org:netkernelroc:rest:status" title="Status"/>
+      </item>
       <separator/>
-      <item id="doc:org:netkernelroc:rest:license:mit" title="MIT License" />
+      <item id="doc:org:netkernelroc:rest:license:mit" title="MIT License"/>
     </toc>
   </book>
 </books>

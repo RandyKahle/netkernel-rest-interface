@@ -1,0 +1,14 @@
+=Status=
+
+This endpoint provides read-only status information about NetKernel
+
+{authornote}Brian - let's start with something simple like status, which is read-only{/authornote}
+
+==/status==
+
+Supports: GET
+Provides: ?what?
+
+{authornote}How should we document a REST interface anyway?{/authornote}
+
+

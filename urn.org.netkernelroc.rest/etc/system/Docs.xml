@@ -2,9 +2,16 @@
   <doc>
     <id>doc:org:netkernelroc:rest:title</id>
     <title>REST management interface</title>
-    <desc/>
+    <desc>A REST interface for NetKernel remote management</desc>
     <uri>res:/org/netkernelroc/rest/doc/title.txt</uri>
-    <category>doc accessor</category>
+    <category>REST,netkernel,management</category>
+  </doc>
+  <doc>
+    <id>doc:org:netkernelroc:rest:status</id>
+    <title>Status</title>
+    <desc>Provides status information about NetKernel</desc>
+    <uri>res:/org/netkernelroc/rest/doc/status.txt</uri>
+    <category/>
   </doc>
   <doc>
     <id>doc:org:netkernelroc:rest:license:mit</id>
